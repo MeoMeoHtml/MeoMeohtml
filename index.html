@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meo Meo·Tool</title>
+  <!-- Font Awesome 6 + Google Font Quicksand -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- CSS riêng -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glass-bg"></div>
+  <div class="paw-prints">
+    <i class="fas fa-paw"></i><i class="fas fa-paw"></i><i class="fas fa-paw"></i><i class="fas fa-paw"></i><i class="fas fa-paw"></i>
+  </div>
+
+  <div class="container">
+    <header>
+      <div class="logo">
+        <i class="fas fa-cat"></i>
+        <span>Meo Meo Tool</span>
+      </div>
+      <div class="nav-links">
+        <a href="#">Trang chủ</a>
+        <a onclick="showModal('toolsModal')">Công cụ</a>
+        <a onclick="showModal('contactModal')">Liên hệ</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>
+        <i class="fas fa-star"></i> Meo Meo <i class="fas fa-star"></i>
+      </h1>
+      <p><i class="fas fa-magic"></i> Chia sẻ công cụ và kèo kiếm tiền free <i class="fas fa-magic"></i></p>
+      <!-- Đã xóa dòng "đi ní!" theo yêu cầu -->
+    </section>
+
+    <!-- Grid Meo Meo Tool – 6 card đầy đủ -->
+    <div class="tools-grid">
+      <!-- Tool 1: TLTOOL.py (tải file) -->
+      <div class="tool-card">
+        <div class="tool-icon"><i class="fab fa-python"></i></div>
+        <h3>TLTOOL.py By Lê Tuấn</h3>
+        <span class="tool-tag"><i class="fas fa-code"></i> Python</span>
+        <p>Công cụ dòng lệnh đa năng, được tối ưu hóa. Nhấn nút để tải ngay.</p>
+        <button class="btn-tool" onclick="downloadTLTOOL()">
+          <i class="fas fa-download"></i> Tải ngay
+        </button>
+      </div>
+
+      <!-- Tool 2: Zalo Auto -->
+      <div class="tool-card">
+        <div class="tool-icon"><i class="fab fa-zalo" style="font-family: 'Font Awesome 6 Brands';"></i></div>
+        <h3>Zalo Auto</h3>
+        <span class="tool-tag"><i class="fas fa-bolt"></i> Kết bạn + link</span>
+        <p>Tự động rải link Zalo, kết bạn hàng loạt. Dung lượng: 321.79KB (ZIP).</p>
+        <a href="https://www.mediafire.com/file/eshrnuhkpcfrvdn/Tool+share.zip/file" target="_blank" class="btn-tool" style="text-decoration: none;">
+          <i class="fas fa-download"></i> Tải MediaFire
+        </a>
+      </div>
+
+      <!-- Tool 3: Đào coin free -->
+      <div class="tool-card">
+        <div class="tool-icon"><i class="fas fa-coins"></i></div>
+        <h3>Đào Bitcoin free</h3>
+        <span class="tool-tag"><i class="fas fa-mobile-alt"></i> iOS/Android</span>
+        <p>Đào Bitcoin trên điện thoại không cần phần cứng. Dùng thử gói miễn phí ngay!</p>
+        <a href="https://cloudminecrypto.com/?invite_code=V4ex9jyZowBqG52v" target="_blank" class="btn-tool" style="text-decoration: none;">
+          <i class="fas fa-rocket"></i> Bắt đầu ngay
+        </a>
+      </div>
+
+      <!-- Tool 4: Tách AuthBumx -->
+      <div class="tool-card">
+        <div class="tool-icon"><i class="fas fa-globe"></i></div>
+        <h3>Tách AuthBumx</h3>
+        <span class="tool-tag"><i class="fas fa-link"></i> Trang chủ</span>
+        <p>Công cụ lấy auth Bumx.</p>
+        <a href="https://letuan12-270109.github.io/TLTOOL/?zarsrc=1303&utm_source=zalo&utm_medium=zalo&utm_campaign=zalo" target="_blank" class="btn-tool" style="text-decoration: none;">
+          <i class="fas fa-external-link-alt"></i> Mở trang
+        </a>
+      </div>
+
+      <!-- Tool 5: Tham gia nhóm Zalo -->
+      <div class="tool-card">
+        <div class="tool-icon"><i class="fab fa-zalo" style="font-family: 'Font Awesome 6 Brands';"></i></div>
+        <h3>Nhóm Zalo Meo Meo</h3>
+        <span class="tool-tag"><i class="fas fa-users"></i> Cộng đồng</span>
+        <p>Tham gia nhóm Zalo để cập nhật tool mới, thảo luận và nhận hỗ trợ.</p>
+        <a href="https://zalo.me/g/buxmoo796" target="_blank" class="btn-tool" style="text-decoration: none;">
+          <i class="fas fa-user-plus"></i> Tham gia ngay
+        </a>
+      </div>
+
+      <!-- Tool 6: File tặng người yêu Valentine -->
+      <div class="tool-card">
+        <div class="tool-icon"><i class="fas fa-heart"></i></div>
+        <h3>File tặng người yêu Valentine</h3>
+        <span class="tool-tag"><i class="fas fa-gift"></i> Quà tặng</span>
+        <p>Món quà bất ngờ dành cho người ấy. File HTML chứa lời chúc và hình ảnh lãng mạn.</p>
+        <a href="https://www.mediafire.com/file/vizi3o1x6ll76v8/t%25E1%25BA%25B7ng_ng%25C6%25B0%25E1%25BB%259Di_y%25C3%25AAu_m%25C3%25ACnh_%25C4%2591i_m%25E1%25BB%258Di_ng%25C6%25B0%25E1%25BB%259Di_.html/file" target="_blank" class="btn-tool" style="text-decoration: none;">
+          <i class="fas fa-download"></i> Tải MediaFire
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div style="font-size:2rem; font-weight:700;">
+        <i class="fas fa-cat"></i> Meo Meo Tool <i class="fas fa-cat"></i>
+      </div>
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/profile.php?id=61586555862849" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/trangiabao20261/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@alexdino266" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://github.com/MeoMeoHtml" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+      <div>© 2026 · Meo Meo x Lê Tuấn ! <i class="fas fa-heart" style="color:#dd5577;"></i></div>
+      <div>
+        <span style="background:rgba(255,255,255,0.2); backdrop-filter:blur(5px); padding:5px 15px; border-radius:99px; border:1px solid rgba(255,255,255,0.5);">#TLTOOL</span>
+        <span style="background:rgba(255,255,255,0.2); backdrop-filter:blur(5px); padding:5px 15px; border-radius:99px; border:1px solid rgba(255,255,255,0.5);">#ZaloTool</span>
+        <span style="background:rgba(255,255,255,0.2); backdrop-filter:blur(5px); padding:5px 15px; border-radius:99px; border:1px solid rgba(255,255,255,0.5);">#ĐàoCoinFree</span>
+        <span style="background:rgba(255,255,255,0.2); backdrop-filter:blur(5px); padding:5px 15px; border-radius:99px; border:1px solid rgba(255,255,255,0.5);">#Valentine</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Modal Công cụ -->
+  <div id="toolsModal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-close" onclick="hideModal('toolsModal')">&times;</div>
+      <div class="modal-title"><i class="fas fa-tools"></i> Danh sách công cụ</div>
+      <div class="tool-list">
+        <div class="tool-item">
+          <i class="fab fa-python"></i>
+          <span>TLTOOL.py - Python script</span>
+          <a href="#" onclick="downloadTLTOOL(); hideModal('toolsModal'); return false;" class="btn-small">Tải</a>
+        </div>
+        <div class="tool-item">
+          <i class="fab fa-zalo"></i>
+          <span>Zalo Auto - Rải link + KB</span>
+          <a href="https://www.mediafire.com/file/eshrnuhkpcfrvdn/Tool+share.zip/file" target="_blank" class="btn-small">Tải</a>
+        </div>
+        <div class="tool-item">
+          <i class="fas fa-coins"></i>
+          <span>Đào coin free - CloudMiner</span>
+          <a href="https://cloudminecrypto.com/?invite_code=V4ex9jyZowBqG52v" target="_blank" class="btn-small">Mở</a>
+        </div>
+        <div class="tool-item">
+          <i class="fas fa-globe"></i>
+          <span>TLTOOL Web - Trang chủ</span>
+          <a href="https://letuan12-270109.github.io/TLTOOL/?zarsrc=1303&utm_source=zalo&utm_medium=zalo&utm_campaign=zalo" target="_blank" class="btn-small">Mở</a>
+        </div>
+        <div class="tool-item">
+          <i class="fab fa-zalo" style="font-family: 'Font Awesome 6 Brands';"></i>
+          <span>Nhóm Zalo Meo Meo - Tham gia</span>
+          <a href="https://zalo.me/g/buxmoo796" target="_blank" class="btn-small">Mở</a>
+        </div>
+        <div class="tool-item">
+          <i class="fas fa-heart"></i>
+          <span>File tặng người yêu Valentine</span>
+          <a href="https://www.mediafire.com/file/vizi3o1x6ll76v8/t%25E1%25BA%25B7ng_ng%25C6%25B0%25E1%25BB%259Di_y%25C3%25AAu_m%25C3%25ACnh_%25C4%2591i_m%25E1%25BB%258Di_ng%25C6%25B0%25E1%25BB%259Di_.html/file" target="_blank" class="btn-small">Tải</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Liên hệ -->
+  <div id="contactModal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-close" onclick="hideModal('contactModal')">&times;</div>
+      <div class="modal-title"><i class="fas fa-envelope"></i> Liên hệ Meo Meo</div>
+      <form class="contact-form" onsubmit="handleContact(event)">
+        <div class="form-group">
+          <label>Tên của ní</label>
+          <input type="text" id="contactName" required>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="contactEmail" required>
+        </div>
+        <div class="form-group">
+          <label>Lời nhắn</label>
+          <textarea id="contactMessage" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Gửi</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript riêng -->
+  <script src="script.js"></script>
+</body>
+</html>
