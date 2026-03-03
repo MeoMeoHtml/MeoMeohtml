@@ -1,29 +1,29 @@
 {
-"vip_keys": [
-{
-"device_id": "5260022503",
-"ten_key": "teuteuktol",
-"time": 30
-},
-{
-"device_id": "8498778533",
-"ten_key": "AlexAlex",
-"time": 30
-},
-{
-"device_id": "5260022521",
-"ten_key": "teuteukxyz",
-"time": 30
-},
-{
-"device_id": "5260022532",
-"ten_key": "teuteuk123",
-"time": 30
-},
-{
-"device_id": "5260022543",
-"ten_key": "teuteuk789",
-"time": 30
-}
-]
+  "vip_keys": [
+    {
+      "device_id": "5260022503",
+      "ten_key": "teuteuktol",
+      "time": 30
+    },
+    {
+      "device_id": "8498778533",
+      "ten_key": "AlexAlex",
+      "time": 30
+    },
+    {
+      "device_id": "5260022521",
+      "ten_key": "teuteukxyz",
+      "time": 30
+    },
+    {
+      "device_id": "5260022532",
+      "ten_key": "teuteuk123",
+      "time": 30
+    },
+    {
+      "device_id": "5260022543",
+      "ten_key": "teuteuk789",
+      "time": 30
+    }
+  ]
 }
